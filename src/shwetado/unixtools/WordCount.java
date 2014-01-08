@@ -1,25 +1,22 @@
 package shwetado.unixtools;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import shwetado.fs.MyFileReader;
 
 public class WordCount {
+    public int countWords(String text){
+        return text.split("\\w+").length;
+    }
+    public int countLines(String text){
+        return text.split("\\n+").length;
+    }
+    public int countChars(String text){
+        return text.length();
+    }
     public static void main(String[] args) {
-        int numOfLines = 0, numOfWords = 0, numOfChars = 0;
-        String filename = args[0];
-        try {
-            String currentLine;
-            BufferedReader br;
-            br = new BufferedReader(new FileReader(filename));
-            while ((currentLine = br.readLine()) != null) {
-                numOfChars += currentLine.length();
-                numOfWords = currentLine.split(" ").length;
-                numOfLines++;
-            }
-        } catch (IOException e) {
-            System.out.println("unable to process");
-        }
-        System.out.println(numOfLines + "\t" + numOfWords + "\t" + numOfChars + " " + filename);
+        MyFileReader wfr;
+        wfr = new MyFileReader();
+        String text = wfr.readFile(args[0]);
+        WordCount wc = new WordCount();
+        System.out.println("\t"+wc.countLines(text)+"\t"+wc.countWords(text)+"\t"+wc.countChars(text)+"\t"+args[0]);
     }
 }
