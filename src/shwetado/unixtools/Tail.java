@@ -1,24 +1,24 @@
 package shwetado.unixtools;
 
-public class Head {
+public class Tail {
     String text = null;
     String defaultNoOfLines="10";
 
-    public Head(String text) {
+    public Tail(String text) {
         this.text = text;
     }
-    public Head(String noOfLines,String text) {
+    public Tail(String noOfLines,String text) {
         this.defaultNoOfLines = noOfLines;
         this.text = text;
     }
-    public String giveHeadLines(){
+    public String giveTailLines(){
         String[] split = text.split("\n");
         String value = "";
         if(!defaultNoOfLines.equals("10")) {
             defaultNoOfLines = defaultNoOfLines.split("-")[1];
         }
         int lines = Integer.parseInt(defaultNoOfLines);
-        for (int i = 0; i < lines; i++)
+        for (int i = (split.length)-lines; i < split.length; i++)
             value += (split[i]+"\n");
         return value;
     }

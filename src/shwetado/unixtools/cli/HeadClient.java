@@ -3,7 +3,7 @@ package shwetado.unixtools.cli;
 import shwetado.fs.MyFileReader;
 import shwetado.unixtools.Head;
 
-public class HeadClient{
+public class HeadClient {
     Head head;
 
     public HeadClient(String fileName) {
@@ -21,9 +21,9 @@ public class HeadClient{
     public static void main(String[] args) {
         HeadClient headClient = new HeadClient(args[0]);
         HeadClient hc = new HeadClient("-5",args[0]);
-        Head head1 = headClient.getHeadCount();
-        Head head2 = hc.getHeadCount();
-        System.out.println(head1.giveHeadLines());
-        System.out.println(head2.giveHeadLines());
+        Head tail1 = headClient.getHeadCount();
+        Head tail2 = hc.getHeadCount();
+        System.out.println(tail1.giveHeadLines());
+        System.out.println(tail2.giveHeadLines());
     }
 }
