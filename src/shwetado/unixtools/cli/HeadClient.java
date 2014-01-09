@@ -10,7 +10,7 @@ public class HeadClient{
         String text = new MyFileReader().readFile(fileName);
         this.head = new Head(text);
     }
-    public HeadClient(int noOfLines, String fileName) {
+    public HeadClient(String noOfLines, String fileName) {
         String text = new MyFileReader().readFile(fileName);
         this.head = new Head(noOfLines,text);
     }
@@ -20,7 +20,7 @@ public class HeadClient{
     }
     public static void main(String[] args) {
         HeadClient headClient = new HeadClient(args[0]);
-        HeadClient hc = new HeadClient(-5,args[0]);
+        HeadClient hc = new HeadClient("-5",args[0]);
         Head head1 = headClient.getHeadCount();
         Head head2 = hc.getHeadCount();
         System.out.println(head1.giveHeadLines());

@@ -15,7 +15,7 @@ public class HeadTest {
     @Test
     public void testGive5HeadLines() throws Exception {
         String text = "a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm";
-        Head head = new Head(-5,text);
+        Head head = new Head("-5",text);
         String expected = "a\nb\nc\nd\ne\n";
         String actual = head.giveHeadLines();
         Assert.assertEquals(expected, actual);
