@@ -7,6 +7,6 @@ public class ReduceBlank {
         this.text = text;
     }
     public String removeSpaces(){
-        return text.replaceAll("\\s+", " ");
+        return text.replaceAll("[ ]", " ");
     }
 }
