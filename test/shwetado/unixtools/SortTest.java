@@ -20,7 +20,7 @@ public class SortTest {
         Sort sort = new Sort();
         String text = "one\ntwo\nthis is good\nhow are\n" +
                 "fine\nthank you";
-        String actual = sort.reverseLines(text,"-r");
+        String actual = sort.reverseLines(text);
         String expected = "two\nthis is good\n" +
                 "thank you\none\n" +
                 "how are\nfine\n";

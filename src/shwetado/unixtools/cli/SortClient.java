@@ -13,7 +13,7 @@ public class SortClient {
         String result, reverse;
         text = file.readFile(args[0]);
         result = sort.sortLines(text);
-        reverse = sort.reverseLines(text,"-r");
+        reverse = sort.reverseLines(text);
         System.out.println(result);
         System.out.println(reverse);
     }
