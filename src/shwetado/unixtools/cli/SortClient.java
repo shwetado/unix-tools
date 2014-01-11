@@ -10,9 +10,11 @@ public class SortClient {
         MyFileReader file = new MyFileReader();
         String text;
         Sort sort = new Sort();
-        String result;
+        String result, reverse;
         text = file.readFile(args[0]);
         result = sort.sortLines(text);
+        reverse = sort.reverseLines(text,"-r");
         System.out.println(result);
+        System.out.println(reverse);
     }
 }
