@@ -22,12 +22,22 @@ sd_cut.sh filename.txt
 ```
 sd_head.sh filename.txt
 ```
+OR
+
+```
+sd_head.sh -noOfLines filename.txt
+```
 
 ##### tail:
 * Delivers the last part of the file contains last `n` lines.
 
 ```
 sd_tail.sh filename.txt
+```
+OR
+
+```
+sd_tail.sh -noOfLines filename.txt
 ```
 
 ##### sort:
