@@ -13,7 +13,7 @@ sd_wc.sh filename.txt
 * Remove or "cut out" sections of each line of a file.
 
 ```
-sd_cut.sh filename.txt
+sd_cut.sh filename.txt -fieldNo [delimiter]
 ```
 
 ##### head:
