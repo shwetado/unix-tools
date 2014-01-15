@@ -2,6 +2,15 @@ Unix Tools
 ====================
 This repository simulates the unix-tools like `wc, cut, head, tail, sort, uniq` and also one extra functionality that is `reduceSpaces`.
 
+#### How do you install?:
+* Download the `.jar` and `.sh` files.
+* You just need to run the `sh setPath.sh` command.
+    It will set environment variable for you.
+* Then you can just run the shell files.
+* For example if you want to run wc then
+    `sh sd_wc.sh $filename`.
+
+
 ##### wc :
 * Short for word count, wc displays a count of lines, words, and characters in a file.
 
@@ -10,7 +19,7 @@ sd_wc.sh filename.txt
 ```
 
 ##### cut :
-* Remove or "cut out" sections of each line of a file.
+* Removes or "cut out" sections of each line of a file.
 
 ```
 sd_cut.sh filename.txt -fieldNo [delimiter]
@@ -41,7 +50,7 @@ sd_tail.sh -noOfLines filename.txt
 ```
 
 ##### sort:
-* Sorts the lines in a file.
+* Sorts the lines in a file and gives you both sorted data in original and reverse order.
 
 ```
 sd_sort.sh filename.txt
