@@ -15,6 +15,7 @@ public class SortClient {
         result = sort.sortLines(text);
         reverse = sort.reverseLines(text);
         System.out.println(result);
+        System.out.println("============== reverse =================");
         System.out.println(reverse);
     }
 }

@@ -1,0 +1,1 @@
+declare -x SHELL_COMMANDS=$PWD

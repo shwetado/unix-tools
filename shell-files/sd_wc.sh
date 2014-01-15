@@ -1,0 +1,1 @@
+java -cp $SHELL_COMMANDS/unix-tools.jar shwetado.unixtools.cli.WcClient $1

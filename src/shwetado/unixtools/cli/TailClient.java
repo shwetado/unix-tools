@@ -19,11 +19,13 @@ public class TailClient {
         return tail;
     }
     public static void main(String[] args) {
-        TailClient tailClient = new TailClient(args[0]);
-        TailClient tc = new TailClient("-5",args[0]);
-        Tail tail1 = tailClient.getTailCount();
+        if(args.length == 1){
+            TailClient tailClient = new TailClient(args[0]);
+            Tail tail1 = tailClient.getTailCount();
+            System.out.println(tail1.giveTailLines());
+        }
+        TailClient tc = new TailClient(args[0],args[1]);
         Tail tail2 = tc.getTailCount();
-        System.out.println(tail1.giveTailLines());
         System.out.println(tail2.giveTailLines());
     }
 }

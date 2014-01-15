@@ -8,7 +8,7 @@ public class TailTest {
     public void testGive10TailLines() throws Exception {
         String text = "a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm";
         Tail tail = new Tail(text);
-        String expected = "d\ne\nf\ng\nh\ni\nj\nk\nl\nm";
+        String expected = "d\ne\nf\ng\nh\ni\nj\nk\nl\nm\n";
         String actual = tail.giveTailLines();
         Assert.assertEquals(expected, actual);
     }
