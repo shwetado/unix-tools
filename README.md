@@ -2,7 +2,7 @@ Unix Tools
 ====================
 This repository simulates the unix-tools like `wc, cut, head, tail, sort, uniq` and also one extra functionality that is `reduceSpaces`.
 
-#### How do you install?:
+#### How do you install?
 * Download the `.jar` and `.sh` files.
 * You just need to run the `sh setPath.sh` command.
     It will set environment variable for you.
