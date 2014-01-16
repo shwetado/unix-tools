@@ -27,4 +27,24 @@ public class CutTest {
         actual = cut.cutLines(data,2);
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void testCutLinesWithoutGivingDelimiterForEmptyString() throws Exception {
+        Cut cut = new Cut();
+        String actual;
+        String data = "";
+        String expected = "";
+        actual = cut.cutLines(data,2);
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testCutLinesWithGivingDelimiterForEmptyString() throws Exception {
+        Cut cut = new Cut();
+        String actual;
+        String data = "";
+        String expected = "";
+        actual = cut.cutLines(data,2,":");
+        Assert.assertEquals(expected,actual);
+    }
 }
