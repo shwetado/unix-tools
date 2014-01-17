@@ -30,7 +30,7 @@ public class HeadClient {
             System.out.println(head2.giveHeadLines());
         }
         catch (ArrayIndexOutOfBoundsException ex) {
-            System.out.println("Array Out Of Bound Exception");
+            System.out.println("Array Out Of Bounds Exception");
         }
     }
 }

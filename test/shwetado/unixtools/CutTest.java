@@ -16,7 +16,6 @@ public class CutTest {
         String expected = "\n\nis\nis\nare\nare\n\n\nyou\n";
         actual = cut.cutLines(text,2,",");
         Assert.assertEquals(actual,expected);
-
     }
 
     @Test
@@ -47,4 +46,14 @@ public class CutTest {
         actual = cut.cutLines(data,2,":");
         Assert.assertEquals(expected,actual);
     }
+
+    @Test
+    public void testCutLinesForFieldWhenThatFieldIsAbsent() throws Exception {
+        Cut cut = new Cut();
+        String actual;
+        String expected = "";
+        actual = cut.cutLines(data,12);
+        Assert.assertEquals(expected,actual);
+    }
+
 }

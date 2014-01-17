@@ -7,7 +7,6 @@ public class Cut {
         String[] lines;
         lines = data.split("\n");
         field_no = field_no - 1;
-
         if (!data.contains(delimiter))
             return data;
         for (String line : lines) {

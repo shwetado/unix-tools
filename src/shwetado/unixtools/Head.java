@@ -13,13 +13,15 @@ public class Head {
     }
     public String giveHeadLines(){
         String[] split = text.split("\n");
-        String value = "";
-        if(!defaultNoOfLines.equals("10")) {
-            defaultNoOfLines = defaultNoOfLines.split("-")[1];
-        }
+        StringBuilder value = new StringBuilder("");
         int lines = Integer.parseInt(defaultNoOfLines);
+
+        if(lines != 10)
+            defaultNoOfLines = defaultNoOfLines.split("-")[1];
+        lines = Integer.parseInt(defaultNoOfLines);
         for (int i = 0; i < lines; i++)
-            value += (split[i]+"\n");
-        return value;
+            value.append(split[i]).append("\n");
+
+        return value.toString();
     }
 }
