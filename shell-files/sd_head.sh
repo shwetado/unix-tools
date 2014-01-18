@@ -1,1 +1,1 @@
-java -cp unix-tools.jar shwetado.unixtools.cli.HeadClient $1 $2
+java -cp ${UNIX_TOOLS}/lib/unix-tools.jar shwetado.unixtools.cli.HeadClient $1 $2
