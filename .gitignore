@@ -1,6 +1,6 @@
 .idea
-*.class
-*.jar
+build/
+out/
 *.war
 *.ear
 *.iml
