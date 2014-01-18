@@ -2,13 +2,15 @@
     <target name="init">
         <mkdir dir="build"/>
         <mkdir dir="build/classes"/>
-        <mkdir dir="build/shell-files"/>
         <mkdir dir="build/classes/test"/>
         <mkdir dir="build/classes/src"/>
-        <copy todir = "build/shell">
+        <mkdir dir="build/dist"/>
+        <mkdir dir="build/dist/bin"/>
+        <mkdir dir="build/dist/lib"/>
+        <copy todir = "build/dist/bin">
             <fileset dir = "shell-files"/>
         </copy>
-        <copy file = "README.md" tofile = "build/README.md"/>
+        <copy file = "README.md" tofile = "build/dist/README.md"/>
     </target>
 
     <target name = "clean">
@@ -37,7 +39,7 @@
             <arg value="shwetado.unixtools.CutTest"/>
             <arg value="shwetado.unixtools.HeadTest"/>
             <arg value="shwetado.unixtools.ReduceBlankTest"/>
-            <arg value="shwetado.unixtools.SortTest"/>
+            <arg value="shwetado.unixt  ools.SortTest"/>
             <arg value="shwetado.unixtools.TailTest"/>
             <arg value="shwetado.unixtools.UniqTest"/>
             <arg value="shwetado.unixtools.WordCountTest"/>
@@ -45,18 +47,18 @@
     </target>
 
     <target name = "createJar" depends = "compile,init">
-        <jar destfile = "build/unix-tools.jar" basedir = "out"/>
+        <jar destfile = "build/dist/lib/unix-tools.jar" basedir = "build/classes/src"/>
     </target>
 
-    <target name = "generateDocs">
+    <target name = "generateDocs" depends="createJar">
         <javadoc packagenames = "shwetado.unixtools.*"
                  sourcepath = "src"
-                 destdir = "lib/docs"
+                 destdir = "build/dist/docs"
                  author  = "true" version = "true"/>
     </target>
 
-    <target name = "createZip" depends = "createJar,compile,init,generateDocs">
-        <zip destfile = "unix-tools.zip" basedir = "build/classes/src" update = "true"/>
+    <target name = "createZip" depends = "generateDocs">
+        <zip destfile = "unix-tools.zip" basedir = "build/dist" update = "true"/>
     </target>
 
 </project>
