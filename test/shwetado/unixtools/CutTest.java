@@ -47,13 +47,4 @@ public class CutTest {
         Assert.assertEquals(expected,actual);
     }
 
-    @Test
-    public void testCutLinesForFieldWhenThatFieldIsAbsent() throws Exception {
-        Cut cut = new Cut();
-        String actual;
-        String expected = "";
-        actual = cut.cutLines(data,12);
-        Assert.assertEquals(expected,actual);
-    }
-
 }
