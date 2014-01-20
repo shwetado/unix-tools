@@ -58,7 +58,7 @@
             <arg value="shwetado.unixtools.CutTest"/>
             <arg value="shwetado.unixtools.HeadTest"/>
             <arg value="shwetado.unixtools.ReduceBlankTest"/>
-l             <arg value="shwetado.unixtools.SortTest"/>
+            <arg value="shwetado.unixtools.SortTest"/>
             <arg value="shwetado.unixtools.TailTest"/>
             <arg value="shwetado.unixtools.UniqTest"/>
             <arg value="shwetado.unixtools.WordCountTest"/>
