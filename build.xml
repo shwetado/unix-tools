@@ -38,11 +38,6 @@
         </javac>
     </target>
 
-    <path id="classpath">
-        <fileset dir="lib/test" includes="*.jar"/>
-        <fileset dir="build/classes/src" includes="*.class"/>
-    </path>
-
     <target name = "compile-test" depends = "compile">
         <javac srcdir = "test" destdir= "build/classes/test"
                classpath="lib/test/junit-4.10.jar;build/classes/src" debug="yes" includeAntRuntime = "false">
