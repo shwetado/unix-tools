@@ -19,4 +19,11 @@ public class WordCountTest {
         WordCount wordCount = new WordCount(text);
         Assert.assertEquals(11,wordCount.countChars());
     }
+
+    @Test
+    public void testCountWords() throws Exception {
+        String text = "hello world";
+        WordCount wordCount = new WordCount(text);
+        Assert.assertEquals(2,wordCount.countWords());
+    }
 }

@@ -6,7 +6,7 @@ public class WordCount {
         this.text = text;
     }
     public int countWords(){
-        return text.split("\\w+").length-1;
+        return text.split("\\w+").length;
     }
     public int countLines(){
         return text.split("\\n+").length;
