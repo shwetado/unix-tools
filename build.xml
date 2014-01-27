@@ -1,4 +1,4 @@
-<project name = "unix-tools">
+<project name = "unix-tools" default = "createZip">
     <target name="init">
         <mkdir dir="build"/>
         <mkdir dir="build/classes"/>
