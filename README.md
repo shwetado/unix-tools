@@ -1,5 +1,7 @@
 Unix Tools
 ====================
+[![Build Status](https://travis-ci.org/shwetado/unix-tools.png)](https://travis-ci.org/shwetado/unix-tools)
+====================
 This repository simulates the unix-tools like `wc, cut, head, tail, sort, uniq` and also one extra functionality that is `reduceSpaces`.
 
 #### How do you install?
